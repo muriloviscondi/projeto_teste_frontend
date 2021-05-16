@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Pessoas</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Tipo</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of responsePersons.data">
+        <td>{{ person.id }}</td>
+        <td>{{ person.name }}</td>
+        <td>{{ person.phoneNumber }}</td>
+        <td>{{ person.phoneNumberType }}</td>
+        <td>
+          <a class="link-icon" routerLink="/persons/update">
+            <fa-icon [icon]="faPencilAlt"></fa-icon>
+          </a>
+          <a class="link-icon" (click)"delete(person.id)">
+            <fa-icon [icon]="faTrashAlt"></fa-icon>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

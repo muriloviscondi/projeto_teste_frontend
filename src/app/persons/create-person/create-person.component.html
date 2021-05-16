@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Adicionar nova pessoa</h1>
+
+  <div class="mb-3">
+    <label class="form-label">Nome:</label>
+    <input
+      type="email"
+      class="form-control"
+      placeholder="Nome Completo"
+      [(ngModel)]="request.name"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Telefone:</label>
+    <input
+      type="email"
+      class="form-control"
+      placeholder="(00) 0000-0000"
+      [(ngModel)]="request.phoneNumber"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Tipo de telefone:</label>
+    <input
+      type="email"
+      class="form-control"
+      placeholder="Casa/Trabalho/Celular"
+      [(ngModel)]="request.phoneNumberType"
+    />
+  </div>
+
+  <div class="mt-5 d-grid gap-2 d-md-flex justify-content-md-end">
+    <button class="btn btn-primary right" (click)="save()">Adicionar</button>
+  </div>
+</div>
